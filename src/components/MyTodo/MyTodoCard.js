@@ -12,7 +12,7 @@ const MyTodoCard = ({ todo, setRefetch, reFetch }) => {
 
 
     if (ischeck) {
-        fetch(`http://localhost:5000/completeTodo/${_id}`, {
+        fetch(`https://agile-anchorage-83111.herokuapp.com/completeTodo/${_id}`, {
             method: 'PUT'
         })
             .then(res => res.json())

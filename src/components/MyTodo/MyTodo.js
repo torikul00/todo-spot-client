@@ -7,7 +7,7 @@ const MyTodo = () => {
     const [reFetch, setRefetch] = useState(false)
     
     useEffect(() => {
-        fetch('http://localhost:5000/todos')
+        fetch('https://agile-anchorage-83111.herokuapp.com/todos')
             .then(res => res.json())
             .then(data => setTodos(data))
     }, [reFetch])

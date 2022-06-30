@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import './Home.css'
+import task from '../../images/task.png'
 
 
 const Home = () => {
@@ -22,9 +24,12 @@ const Home = () => {
     });
 
     const handleTaskSubmit = (e) => {
+        if (title === '' || description === '') {
+            return
+        }
         e.preventDefault()
         const todo = { title, description }
-        fetch('http://localhost:5000/addTodos', {
+        fetch('https://agile-anchorage-83111.herokuapp.com/addTodos', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -36,20 +41,30 @@ const Home = () => {
                 if (data.acknowledged) {
                     document.getElementById('title').value = ''
                     document.getElementById('description').value = ''
-                    alert('Todo task added')
+                    toast.success('Task Added')
 
                 }
                 else {
-                    alert('Something went wrong')
+                    toast.error('Something went wrong')
                 }
             })
     }
     return (
-        <form className='task-form' onSubmit={handleTaskSubmit} >
-            <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Title' className='d-block' required />
-            <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description heres' cols="30" rows="10" required></textarea>
-            <button type='submit'>Add Todo</button>
-        </form>
+        <>
+            <div className="main-container">
+                <div className="banner-image">
+                    <img src={task} alt="" />
+                </div>
+            <form className='task-form' onSubmit={handleTaskSubmit} >
+                <div className='w-full'>
+                    <h1>ADD YOUR TASK HERE</h1>
+                <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Title' className='d-block' required />
+                <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description heres' cols="30" rows="5" required></textarea>
+                <button type='submit'>Add Todo</button>
+                </div>
+            </form>
+            </div>
+        </>
     );
 };
 

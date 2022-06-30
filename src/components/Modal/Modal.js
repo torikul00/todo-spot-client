@@ -4,12 +4,11 @@ import  {toast} from 'react-toastify'
 const Modal = ({ todo, setIsShow ,setRefetch,reFetch}) => {
     const [tit, setTit] = useState(todo?.title)
     const [des, setDes] = useState(todo?.description)
-
     const handleTaskUpdate = () => {
 
         const updateDoc = { title: tit, description: des }
 
-        fetch(`http://localhost:5000/updateTodo/${todo._id}`, {
+        fetch(`https://agile-anchorage-83111.herokuapp.com/updateTodo/${todo._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
