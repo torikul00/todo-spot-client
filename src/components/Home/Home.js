@@ -45,7 +45,7 @@ const Home = () => {
             })
     }
     return (
-        <form onSubmit={handleTaskSubmit} >
+        <form className='task-form' onSubmit={handleTaskSubmit} >
             <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Title' className='d-block' required />
             <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description heres' cols="30" rows="10" required></textarea>
             <button type='submit'>Add Todo</button>

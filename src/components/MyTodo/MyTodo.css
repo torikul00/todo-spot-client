@@ -12,9 +12,28 @@
 
 .todo-container {
     width: 60%;
+    height: auto;
+    position: relative;
     padding: 20px;
     background-color: aqua;
-    overflow: scroll;
     margin: 50px 0px;
+}
+.todo{
+    width: 100%;
+}
+.checkbox{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
 }
