@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './MyTodo.css'
+import MyTodoCard from './MyTodoCard';
 const MyTodo = () => {
     const [todos,setTodos] = useState([])
 
@@ -11,8 +12,10 @@ const MyTodo = () => {
 
 
     return (
-        <div>
-        <h1></h1>
+        <div className='todos-container'>
+        {
+            todos?.map(todo => <MyTodoCard key={todo._id}  todo={todo}/>).reverse()
+        }
         </div>
     );
 };

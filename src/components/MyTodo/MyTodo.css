@@ -1,0 +1,20 @@
+.todos-container{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0px;
+    
+}
+
+.todo-container {
+    width: 60%;
+    padding: 20px;
+    background-color: aqua;
+
+    margin: 50px 0px;
+
+}
