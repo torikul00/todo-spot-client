@@ -19,7 +19,6 @@ const MyTodo = () => {
             {
                 todos?.map(todo => <MyTodoCard
                      reFetch={reFetch}
-                    
                      setRefetch={setRefetch} 
                      key={todo._id}
                       todo={todo} 
