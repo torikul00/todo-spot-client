@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './CompletedTask.css'
 import CompletedTaskCard from './CompletedTaskCard';
+import ComplImage from '../../images/completeTask.png'
 
 const CompletedTask = () => {
 
@@ -13,11 +14,17 @@ const CompletedTask = () => {
     }, [])
 
     return (
-        <div>
 
-           {
-            todos?.map(todo => <CompletedTaskCard todo={todo} />).reverse()
-           }
+        <div className='complete-task-container'>
+            <div className="task-banner-image">
+                <img src={ComplImage} alt="" />
+            </div>
+            <div className='task-info-container'>
+                <h2 className='text-success'> TASKS YOU HAVE COMPLETED</h2>
+                {
+                    todos?.map(todo => <CompletedTaskCard todo={todo} />).reverse()
+                }
+            </div>
 
         </div>
     );

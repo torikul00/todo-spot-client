@@ -1,13 +1,12 @@
-.todos-container{
+.todos-container {
     width: 100%;
     height: auto;
-    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 80px 0px;
-    
+
 }
 
 .todo-container {
@@ -15,25 +14,39 @@
     height: auto;
     position: relative;
     padding: 20px;
-    background-color: aqua;
-    margin: 50px 0px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 20px 0px;
 }
-.todo{
+
+.todo {
     width: 100%;
 }
-.checkbox{
+
+.checkbox {
     position: absolute;
-    top: 20px;
-    right: 100px;
-    width: 30px;
-    height: 30px;
+    bottom: 20px;
+    right: 70px;
+    width: 27px;
+    height: 27px;
     cursor: pointer;
 }
 
 .edit-icon {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     cursor: pointer;
     font-size: 30px;
+}
+
+@media only screen and (max-width:600px) {
+
+    .todo-container {
+        width: 80%;
+    }
+
+    .todo p {
+        margin-bottom: 40px;
+    }
 }

@@ -57,10 +57,10 @@ const Home = () => {
                 </div>
             <form className='task-form' onSubmit={handleTaskSubmit} >
                 <div className='w-full'>
-                    <h1>ADD YOUR TASK HERE</h1>
-                <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Title' className='d-block' required />
-                <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description heres' cols="30" rows="5" required></textarea>
-                <button type='submit'>Add Todo</button>
+                    <h1>ADD YOUR TODO'S HERE</h1>
+                <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Task Title' className='d-block' required />
+                <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description' cols="30" rows="5" required></textarea>
+                <button className='btn btn-primary' type='submit'>Add Todo</button>
                 </div>
             </form>
             </div>

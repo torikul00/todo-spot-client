@@ -28,12 +28,12 @@ const Modal = ({ todo, setIsShow ,setRefetch,reFetch}) => {
     return (
         <div className='overly'>
             <div className="modal-container">
-
-                <input onChange={(e) => setTit(e.target.value)} type="text" value={tit} />
-                <textarea onChange={(e) => setDes(e.target.value)} name="" id="" value={des} cols="30" rows="10"></textarea>
-
-                <button onClick={handleTaskUpdate}>Update</button>
-                <button onClick={() => setIsShow(false)}>Cancel</button>
+                <label>Title</label>
+                <input  onChange={(e) => setTit(e.target.value)} type="text" value={tit} />
+                <label>Description</label>
+                <textarea  onChange={(e) => setDes(e.target.value)} name="" id="" value={des} cols="30" rows="4"></textarea>
+                <button className='btn btn-primary me-2' onClick={handleTaskUpdate}>Update</button>
+                <button className='btn btn-primary me-2' onClick={() => setIsShow(false)}>Cancel</button>
             </div>
         </div>
     );

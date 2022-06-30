@@ -1,0 +1,37 @@
+.complete-task-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+
+}
+.task-info-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.task-banner-image{
+    width: 50%;
+}
+.task-banner-image img {
+    width: 100%;
+}
+.task-info{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+@media only screen and (max-width:600px) {
+    .complete-task-container{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .task-info-container,.task-banner-image{
+        width: 90%;
+    }
+    
+}
