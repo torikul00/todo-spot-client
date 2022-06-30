@@ -14,7 +14,7 @@
     width: 60%;
     padding: 20px;
     background-color: aqua;
-
+    overflow: scroll;
     margin: 50px 0px;
 
 }
