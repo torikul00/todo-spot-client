@@ -4,6 +4,7 @@ import './Home.css'
 import task from '../../images/task.png'
 
 
+
 const Home = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -55,14 +56,15 @@ const Home = () => {
                 <div className="banner-image">
                     <img src={task} alt="" />
                 </div>
-            <form className='task-form' onSubmit={handleTaskSubmit} >
-                <div className='w-full'>
-                    <h1>ADD YOUR TODO'S HERE</h1>
-                <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Task Title' className='d-block' required />
-                <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description' cols="30" rows="5" required></textarea>
-                <button className='btn btn-primary' type='submit'>Add Todo</button>
-                </div>
-            </form>
+                <form className='task-form' onSubmit={handleTaskSubmit} >
+                    <div className='w-full'>
+                        <h1>ADD YOUR TODO'S HERE</h1>
+                        <input onChange={(e) => setTitle(e.target.value)} id='title' type="text" placeholder='Task Title' className='d-block' required />
+                        <textarea onChange={(e) => setDescription(e.target.value)} className='d-block' id='description' placeholder='Your task description' cols="30" rows="5" required></textarea>
+                        <button className='btn btn-primary' type='submit'>Add Todo</button>
+                    </div>
+                </form>
+             
             </div>
         </>
     );

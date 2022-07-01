@@ -7,9 +7,12 @@
 }
 .task-info-container{
     width: 50%;
+    height: auto;
+    overflow-y: scroll;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    padding: 15px;
+    background-color: azure;
     flex-direction: column;
 }
 .task-banner-image{
@@ -20,7 +23,7 @@
 }
 .task-info{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.452);
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0px;
